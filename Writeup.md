@@ -1,9 +1,7 @@
 ## Project: 3D Motion Planning
-![Quad Image](./misc/enroute.png)
+![Trajectory Image](./images/Trajectory%20Flight.png)
 
 ---
-
-
 # Required Steps for a Passing Submission:
 1. Load the 2.5D map in the colliders.csv file describing the environment.
 2. Discretize the environment into a grid or graph representation.
@@ -30,7 +28,7 @@ You're reading it! Below I describe how I addressed each rubric point and where 
 These scripts contain a basic planning implementation that includes...
 
 And here's a lovely image of my results (ok this image has nothing to do with it, but it's a nice example of how to include images in your writeup!)
-![Top Down View](./misc/high_up.png)
+![Top Down View](./images/Bird's%20Eye%20View.png)
 
 Here's | A | Snappy | Table
 --- | --- | --- | ---
@@ -44,9 +42,10 @@ Here's | A | Snappy | Table
 #### 1. Set your global home position
 Here students should read the first line of the csv file, extract lat0 and lon0 as floating point values and use the self.set_home_position() method to set global home. Explain briefly how you accomplished this in your code.
 
-
-And here is a lovely picture of our downtown San Francisco environment from above!
-![Map of SF](./misc/map.png)
+The latitude and longitude values are given in the first line of the collider.csv file.
+In the planning.py file, a function to get the latitude and longitude was written. See line  in planning.py.
+The filename was passed to this method and the first line was read and the latitude and longitude values were read using string manipulation code. 
+The returned values of the latitude and longitude was then set as the global home position in the motion_planning.py file as shown in lines 121-126. https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L121
 
 #### 2. Set your current local position
 Here as long as you successfully determine your local position relative to global home you'll be all set. Explain briefly how you accomplished this in your code.
