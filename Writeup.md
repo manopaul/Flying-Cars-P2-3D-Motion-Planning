@@ -57,5 +57,5 @@ The top down view image shows the paths with the linear waypoints culled from a 
 ### Execute the flight
 #### 1. Does it work?
 You should be able to observe what is shown in the video below
-[![Backyard Flyer](http://img.youtube.com/vi/u61VaB3Qmqk/2.jpg)](https://youtu.be/u61VaB3Qmqk)
+[![3D Motion Planning](http://img.youtube.com/vi/u61VaB3Qmqk/2.jpg)](https://youtu.be/u61VaB3Qmqk)
 
