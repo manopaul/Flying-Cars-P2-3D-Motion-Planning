@@ -1,10 +1,12 @@
-# Project: 3D Motion Planning
+## Project: 3D Motion Planning
+
 ---
 In this 3D Motion planning, the concepts of planning a trajectory by discretizing the environment for search, grid and graph representation of the enviroment, obstacle representations from collider files, A* search algorithm, converting global to local coordinates, and optimization using collinearity checks are addressed.
 
 The top down image shows the paths from a bird's eye view perspective. 
 ![Top Down View](./images/Bird's%20Eye%20View.png)
 ---
+
 ### Writeup / README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  
@@ -60,8 +62,9 @@ A video showing the 3D Motion Planning working code is linked below:
 [![3D Motion Planning](http://img.youtube.com/vi/u61VaB3Qmqk/0.jpg)](https://youtu.be/u61VaB3Qmqk)
 
 ---
-# Running the Project
+## Running the Project
 ---
+
 ## To run this project on your local machine, follow these instructions:
 ### Step 1: Download the Simulator
 This is a new simulator environment!  
