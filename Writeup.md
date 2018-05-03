@@ -1,5 +1,8 @@
 ## Project: 3D Motion Planning
-![Trajectory Image](./images/Trajectory%20Flight.png)
+
+The top down image shows the paths from a bird's eye view perspective. 
+![Top Down View](./images/Bird's%20Eye%20View.png)
+
 ---
 
 In this 3D Motion planning, the concepts of planning a trajectory by discretizing the environment for search, grid and graph representation of the enviroment, obstacle representations from collider files, A* search algorithm, converting global to local coordinates, and optimization using collinearity checks are addressed.
@@ -51,8 +54,8 @@ Lines XXX in the planning_utils.py file show these.
 
 #### 6. Cull waypoints 
 Using the A* algorithm, a trajectory path (waypoints) from start to goal position is determined. However, if two waypoints lie on the same line, then it would be suboptimal for the flying car (drone) to go through each waypoint and center itself relative to that waypoint. So a collinearity check is done and waypoints that are in line between the first and last waypoint in that line are culled (pruned) and a new pruned path is computed from the path. Lines XX show this.
-The top down view image shows the paths with the linear waypoints culled from a bird's eye view perspective. 
-![Top Down View](./images/Bird's%20Eye%20View.png)
+The trajectory image below shows the paths with the linear waypoints culled out. 
+![Trajectory Image](./images/Trajectory%20Flight.png)
 
 ### Execute the flight
 #### 1. Does it work?
