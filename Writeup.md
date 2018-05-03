@@ -8,7 +8,7 @@ In this 3D Motion planning, the concepts of planning a trajectory by discretizin
 ### Writeup / README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  
-You're reading it! Below I describe how I addressed each rubric point and where in my code each point is handled.
+You're reading it! Below I describe how I addressed each rubric point and where in my code each point is handled. How to run this project is specified in the README.md file.
 
 ### Explain the Starter Code
 
@@ -56,5 +56,5 @@ The top down view image shows the paths with the linear waypoints culled from a 
 
 ### Execute the flight
 #### 1. Does it work?
-A video recording of the 
+A video recording of the https://youtu.be/u61VaB3Qmqk
 
