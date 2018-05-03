@@ -45,15 +45,15 @@ The obstacles information was read from the provided colliders file to create a 
 Lines XXX in the motion_planning.py file show this.
 
 #### 4. Set grid goal position from geodetic coords
-
-This step is to add flexibility to the desired goal location. Should be able to choose any (lat, lon) within the map and have it rendered to a goal location on the grid.
+The goal position is provided as parameter arguments in the main method as latitude and longitude arguments. If not goal arguments are passed, the program defaults to the Gateway Theatre location. The goal position along is converted to local position in the same manner as the grid start position and both the grid start and the grid goal position are passed to the A* algorithm to determine to determine the path from the start to the goal. 
+Lines XXX in the motion_planning.py file show these. 
 
 #### 5. Modify A* to include diagonal motion (or replace A* altogether)
-Minimal requirement here is to modify the code in planning_utils() to update the A* implementation to include diagonal motions on the grid that have a cost of sqrt(2), but more creative solutions are welcome. Explain the code you used to accomplish this step.
+The planning_utils.py was modified to include diagonal motions on the grid with a cost of sqrt(2) as shown in lines XXX. Additionally, the file was modified to account of valid actions to cover NORTH_EAST, NORTH_WEST, SOUTH_EAST and SOUTH_WEST motion in addition to the NORTH, EAST, WEST and SOUTH directions. 
+Lines XXX in the planning_utils.py file show these. 
 
 #### 6. Cull waypoints 
-For this step you can use a collinearity test or ray tracing method like Bresenham. The idea is simply to prune your path of unnecessary waypoints. Explain the code you used to accomplish this step.
-
+Using the A* algorithm, a trajectory path (waypoints) from start to goal position is determined. However, if two waypoints lie on the same line, then it would be suboptimal for the flying car (drone) to go through each waypoint and center itself relative to that waypoint. So a collinearity check is done and waypoints that are in line between the first and last waypoint in that line are culled (pruned) and a new pruned path is computed from the path. Lines XX show this.
 
 ![Top Down View](./images/Bird's%20Eye%20View.png)
 
