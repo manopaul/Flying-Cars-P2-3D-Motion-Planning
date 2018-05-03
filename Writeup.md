@@ -1,30 +1,18 @@
 ## Project: 3D Motion Planning
 ![Trajectory Image](./images/Trajectory%20Flight.png)
-
 ---
 In this 3D Motion planning, the concepts of planning a trajectory by discretizing the environment for search, grid and graph representation of the enviroment, obstacle representations from collider files, A* search algorithm, converting global to local coordinates, and optimization using collinearity checks are addressed. 
-
 ---
 ### Writeup / README
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  
-
 You're reading it! Below I describe how I addressed each rubric point and where in my code each point is handled.
 
 ### Explain the Starter Code
 
 #### 1. Explain the functionality of what's provided in `motion_planning.py` and `planning_utils.py`
 The starter code includes 2 python script files - motion_planning.py and planning_utils.py.
-These scripts contain a basic planning implementation that includes...
-
-
-
-Here's | A | Snappy | Table
---- | --- | --- | ---
-1 | `highlight` | **bold** | 7.41
-2 | a | b | c
-3 | *italic* | text | 403
-4 | 2 | 3 | abcd
+These scripts contain a basic planning implementation for a flying car to fly in a zig zag manner from start to goal. It includes state transitions that was part of the backyard flyer project. 
 
 ### Implementing Your Path Planning Algorithm
 
@@ -54,17 +42,10 @@ Lines XXX in the planning_utils.py file show these.
 
 #### 6. Cull waypoints 
 Using the A* algorithm, a trajectory path (waypoints) from start to goal position is determined. However, if two waypoints lie on the same line, then it would be suboptimal for the flying car (drone) to go through each waypoint and center itself relative to that waypoint. So a collinearity check is done and waypoints that are in line between the first and last waypoint in that line are culled (pruned) and a new pruned path is computed from the path. Lines XX show this.
-
+The top down view image shows the paths with the linear waypoints culled from a bird's eye view perspective. 
 ![Top Down View](./images/Bird's%20Eye%20View.png)
 
 ### Execute the flight
 #### 1. Does it work?
-It works!
-
-### Double check that you've met specifications for each of the [rubric](https://review.udacity.com/#!/rubrics/1534/view) points.
-  
-# Extra Challenges: Real World Planning
-
-For an extra challenge, consider implementing some of the techniques described in the "Real World Planning" lesson. You could try implementing a vehicle model to take dynamic constraints into account, or implement a replanning method to invoke if you get off course or encounter unexpected obstacles.
-
+A video recording of the 
 
