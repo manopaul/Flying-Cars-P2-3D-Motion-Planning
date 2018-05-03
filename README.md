@@ -60,7 +60,7 @@ The trajectory image below shows the paths with the linear waypoints culled out.
 ### Execute the flight
 #### 1. Does it work?
 A video showing the 3D Motion Planning working code can be seen here.
-<a href="./images/3D%20Motion%20Planning.gif" target="_blank">3D Motion Planning Video</a>
+<a href="https://youtu.be/u61VaB3Qmqk" target="_blank"><img src="./images/3D%20Motion%20Planning.gif"></a>
 
 [![3D Motion Planning](http://img.youtube.com/vi/u61VaB3Qmqk/0.jpg)](https://youtu.be/u61VaB3Qmqk)
 
