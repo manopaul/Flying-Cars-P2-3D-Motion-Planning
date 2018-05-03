@@ -5,6 +5,7 @@ In this 3D Motion planning, the concepts of planning a trajectory by discretizin
 
 The top down image shows the paths from a bird's eye view perspective. 
 ![Top Down View](./images/Bird's%20Eye%20View.png)
+
 ---
 
 ### Writeup / README
