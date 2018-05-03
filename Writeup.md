@@ -1,7 +1,9 @@
 ## Project: 3D Motion Planning
 ![Trajectory Image](./images/Trajectory%20Flight.png)
 ---
-In this 3D Motion planning, the concepts of planning a trajectory by discretizing the environment for search, grid and graph representation of the enviroment, obstacle representations from collider files, A* search algorithm, converting global to local coordinates, and optimization using collinearity checks are addressed. 
+
+In this 3D Motion planning, the concepts of planning a trajectory by discretizing the environment for search, grid and graph representation of the enviroment, obstacle representations from collider files, A* search algorithm, converting global to local coordinates, and optimization using collinearity checks are addressed.
+
 ---
 ### Writeup / README
 
@@ -12,7 +14,14 @@ You're reading it! Below I describe how I addressed each rubric point and where 
 
 #### 1. Explain the functionality of what's provided in `motion_planning.py` and `planning_utils.py`
 The starter code includes 2 python script files - motion_planning.py and planning_utils.py.
-These scripts contain a basic planning implementation for a flying car to fly in a zig zag manner from start to goal. It includes state transitions that was part of the backyard flyer project. 
+These scripts contain a basic planning implementation for a flying car to fly in a zig zag manner from start to goal. It includes state transitions that were part of the backyard flyer project. These include: 
+arming transition,
+takeoff transition,
+waypoint transition,
+landing transition, and
+disarming transition
+
+These state transition methods was augmented by implementing the planning state after arming and before takeoff state transition.
 
 ### Implementing Your Path Planning Algorithm
 
