@@ -56,6 +56,7 @@ The planning_utils.py was modified to include diagonal motions on the grid with 
 Using the A* algorithm, a trajectory path (waypoints) from start to goal position is determined. However, if two waypoints lie on the same line, then it would be suboptimal for the flying car (drone) to go through each waypoint and center itself relative to that waypoint. So a collinearity check is done and waypoints that are in the same line between the first and last waypoint in that line are culled (pruned) and a new pruned path is computed from the path. Lines [183](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L183) shows this. The prune path method that does the collinearity check is defined in lines [191-212](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/planning_utils.py#L191) of the planning_utils.py file.
 The trajectory image below shows the paths with the linear waypoints culled out. 
 ![Trajectory Image](./images/Trajectory%20Flight.png)
+![Trajectory Flight](./images/3D%20Motion%20Planning.gif)
 
 ### Execute the flight
 #### 1. Does it work?
