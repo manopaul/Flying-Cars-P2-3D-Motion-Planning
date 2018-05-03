@@ -1,12 +1,11 @@
 ## Project: 3D Motion Planning
 
-The top down image shows the paths from a bird's eye view perspective. 
-![Top Down View](./images/Bird's%20Eye%20View.png)
-
 ---
 
 In this 3D Motion planning, the concepts of planning a trajectory by discretizing the environment for search, grid and graph representation of the enviroment, obstacle representations from collider files, A* search algorithm, converting global to local coordinates, and optimization using collinearity checks are addressed.
 
+The top down image shows the paths from a bird's eye view perspective. 
+![Top Down View](./images/Bird's%20Eye%20View.png)
 ---
 ### Writeup / README
 
@@ -33,8 +32,7 @@ These state transition methods was augmented by implementing the planning state 
 The latitude and longitude values are given in the first line of the collider.csv file.
 In the planning.py file, a function to get the latitude and longitude was written. See line  in planning.py.
 The filename was passed to this method and the first line was read and the latitude and longitude values were read using string manipulation code. 
-The extracted latitude (lat0) and longitude (lon0) values owas then set as the global home position (self.set_home_position()) in the motion_planning.py file as shown in lines 121-126. 
-https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L121
+The extracted latitude (lat0) and longitude (lon0) values owas then set as the global home position (self.set_home_position()) in the motion_planning.py file as shown in lines [121-126](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L121)
 
 #### 2. Set your current local position
 In order to determine the local position relative to the global home position, the current global position is first determined using the latitude, longitude and altitude as shown in line XXX of the motion_planning.py file. 
