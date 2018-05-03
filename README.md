@@ -31,21 +31,23 @@ These state transition methods was augmented by implementing the planning state 
 #### 1. Set your global home position
 
 The latitude and longitude values are given in the first line of the collider.csv file.
-In the planning.py file, a function to get the latitude and longitude was written. See line  in planning.py.
-The filename was passed to this method and the first line was read and the latitude and longitude values were read using string manipulation code. 
-The extracted latitude (lat0) and longitude (lon0) values owas then set as the global home position (self.set_home_position()) in the motion_planning.py file as shown in lines <a href="https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L121" target="_blank">121-126</a>
+In the planning.py file, a function to get the latitude and longitude was written. 
+The filename was passed to this method and the first line was read and the latitude and longitude values were read using string manipulation code.
+See lines [163-175](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/planning_utils.py#L163) in planning_utils.py.
+The extracted latitude (lat0) and longitude (lon0) values were then set as the global home position (self.set_home_position()) in the motion_planning.py file as shown in line [126](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L126)
 
 #### 2. Set your current local position
-In order to determine the local position relative to the global home position, the current global position is first determined using the latitude, longitude and altitude as shown in line XXX of the motion_planning.py file. 
-Then using the global_to_local function in the planning.py (lines XXX), the current global position is converted to the local position which comprises of the NED frame (local North, local East, and local Altitude) as shown in lines XXX of the motion_planning file. 
+In order to determine the local position relative to the global home position, the current global position is first determined using the latitude, longitude and altitude as shown in line [129](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L129) of the motion_planning.py file. 
+Then using the global_to_local function from the udacidrone.frame_utils, the current global position is converted to the local position which comprises of the NED frame (local North, local East, and local Down (altitude)) as shown in line [133](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L133) of the motion_planning.py file. 
 
 #### 3. Set grid start position from local position
-The obstacles information was read from the provided colliders file to create a grid for a particular altitude and safety margins around the obstacles. When the configuration space (grid) was created, the north and east offset was determined. Then by subtracting the respective offsets from the local north and local east position, the grid start north and grid start east positions were computed to determine th grid start position from the local position. 
-Lines XXX in the motion_planning.py file show this.
+The obstacles information was read from the provided colliders file to create a grid for a particular altitude and safety margins around the obstacles. When the configuration space (grid) was created, the north and east offset was determined. Lines [136-141](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L136) in the motion_planning.py file show this.
+Then by subtracting the respective offsets from the local north and local east position, the grid start north and grid start east positions were computed to determine th grid start position from the local position. 
+Lines [143-152](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L143) in the motion_planning.py file show this.
 
 #### 4. Set grid goal position from geodetic coords
-The goal position is provided as parameter arguments in the main method as latitude and longitude arguments. If not goal arguments are passed, the program defaults to the Gateway Theatre location. The goal position along is converted to local position in the same manner as the grid start position and both the grid start and the grid goal position are passed to the A* algorithm to determine to determine the path from the start to the goal. 
-Lines XXX in the motion_planning.py file show these. 
+The goal position is provided as parameter arguments in the main method as latitude and longitude arguments. If no goal arguments are passed, the program defaults to the Gateway Theatre location. See lines [209-217](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L209) for this implementation. The goal position is converted to local position in the same manner as the grid start position. Lines [162-171](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L162) in the motion_planning.py file shows this implementation. 
+Both the grid start and the grid goal position are passed to the A* algorithm to determine to determine the path from the start to the goal.  Lines [178](https://github.com/manopaul/Flying-Cars-P2-3D-Motion-Planning/blob/master/motion_planning.py#L178) in the motion_planning.py file shows this implementation. 
 
 #### 5. Modify A* to include diagonal motion (or replace A* altogether)
 The planning_utils.py was modified to include diagonal motions on the grid with a cost of sqrt(2) as shown in lines XXX. Additionally, the file was modified to account of valid actions to cover NORTH_EAST, NORTH_WEST, SOUTH_EAST and SOUTH_WEST motion in addition to the NORTH, EAST, WEST and SOUTH directions. 
